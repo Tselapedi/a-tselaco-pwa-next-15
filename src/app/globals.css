@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --primary-50: #fff1f2;
+  --primary-100: #ffe4e6;
+  --primary-200: #fecdd3;
+  --primary-300: #fda4af;
+  --primary-400: #fb7185;
+  --primary-500: #f43f5e;
+  --primary-600: #e11d48;
+  --primary-700: #be123c;
+  --primary-800: #9f1239;
+  --primary-900: #881337;
+
+  --secondary-50: #f0fdfa;
+  --secondary-100: #ccfbf1;
+  --secondary-200: #99f6e4;
+  --secondary-300: #5eead4;
+  --secondary-400: #2dd4bf;
+  --secondary-500: #14b8a6;
+  --secondary-600: #0d9488;
+  --secondary-700: #0f766e;
+  --secondary-800: #115e59;
+  --secondary-900: #134e4a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Custom utility classes */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, var(--secondary-500), var(--secondary-600));
+}
+
+/* Button hover effects */
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
